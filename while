@@ -1,0 +1,71 @@
+#1
+java
+public class NumerosAscendentes {
+    public static void main(String[] args) {
+        int numero = 1;
+
+        while (numero <= 20) {
+            System.out.println(numero);
+            numero++;
+        }
+    }
+}
+
+#2
+import java.util.Scanner;
+
+public class ImprimirHastaN {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Ingrese un número: ");
+        int n = scanner.nextInt();
+        
+        int numero = 1;
+        
+        while (numero <= n) {
+            System.out.println(numero);
+            numero++;
+        }
+
+        scanner.close();
+    }
+}
+
+#3
+java
+import java.util.Scanner;
+
+public class SumaPositivos {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        int suma = 0;
+        int numero;
+        
+        System.out.println("Ingrese números positivos para sumarlos. Ingrese un número negativo para detenerse.");
+        
+        while (true) {
+            System.out.print("Ingrese un número: ");
+            numero = scanner.nextInt();
+            
+            if (numero < 0) {
+                break;
+            }
+            
+            suma += numero;
+        }
+        
+        System.out.println("La suma de los números positivos ingresados es: " + suma);
+        
+        scanner.close();
+    }
+}
+
+#4
+while (a <= limite) {
+    System.out.print(a + " ");
+    int siguiente = a + b;
+    a = b;
+    b = siguiente;
+}
