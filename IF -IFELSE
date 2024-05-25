@@ -1,0 +1,102 @@
+IF
+import java.util.Scanner;
+
+public class PositivoNegativoCero {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingrese un número: ");
+        int numero = scanner.nextInt();
+
+        if (numero > 0) {
+            System.out.println("El número es positivo.");
+        } else if (numero < 0) {
+            System.out.println("El número es negativo.");
+        } else {
+            System.out.println("El número es cero.");
+        }
+
+        scanner.close();
+    }
+}
+
+#2
+java
+import java.util.Scanner;
+
+public class ParImpar {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingrese un número: ");
+        int numero = scanner.nextInt();
+
+        if (numero % 2 == 0) {
+            System.out.println("El número es par.");
+        } else {
+            System.out.println("El número es impar.");
+        }
+
+        scanner.close();
+    }
+}
+
+#3
+import java.util.Scanner;
+
+public class MayorDeTres {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Ingrese el primer número: ");
+        int numero1 = scanner.nextInt();
+        
+        System.out.print("Ingrese el segundo número: ");
+        int numero2 = scanner.nextInt();
+        
+        System.out.print("Ingrese el tercer número: ");
+        int numero3 = scanner.nextInt();
+
+        int mayor;
+
+        if (numero1 >= numero2 && numero1 >= numero3) {
+            mayor = numero1;
+        } else if (numero2 >= numero1 && numero2 >= numero3) {
+            mayor = numero2;
+        } else {
+            mayor = numero3;
+        }
+
+        System.out.println("El mayor de los tres números es: " + mayor);
+
+        scanner.close();
+    }
+}
+
+#4
+
+java
+import java.util.Scanner;
+
+public class AnioBisiesto {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Ingrese un año: ");
+        int anio = scanner.nextInt();
+
+        boolean esBisiesto = false;
+
+        if (anio % 4 == 0) {
+            if (anio % 100 != 0 || anio % 400 == 0) {
+                esBisiesto = true;
+            }
+        }
+
+        if (esBisiesto) {
+            System.out.println("El año " + anio + " es bisiesto.");
+        } else {
+            System.out.println("El año " + anio + " no es bisiesto.");
+        }
+
+        scanner.close();
+    }
+}
